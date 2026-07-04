@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# V.Avinash — Full Stack Developer Portfolio
 
-## Getting Started
+A sleek, responsive, and highly performant personal portfolio website for V.Avinash, built to showcase expertise in full-stack development, e-commerce (Shopify), ERP integrations (ERPNext), and digital marketing.
 
-First, run the development server:
+## 🚀 Features
+
+- **Modern Tech Stack**: Built with [Next.js 15](https://nextjs.org/) (App Router) and [Tailwind CSS v4](https://tailwindcss.com/).
+- **Smooth Animations**: Integrated with [Framer Motion](https://www.framer.com/motion/) for fluid, scroll-triggered animations.
+- **Responsive Design**: Mobile-first approach ensuring a perfect layout across all device sizes.
+- **Pharma Focus**: A dedicated, visually distinct section highlighting hands-on technical experience in the pharmaceutical and healthcare sectors.
+- **Functional Contact Form**: Integrated with [FormSubmit](https://formsubmit.co/) for spam-free, AJAX-powered email delivery without backend configuration.
+- **Fast & SEO Optimized**: Next.js Server Components and optimized assets for blazing-fast load times.
+
+## 💻 Tech Stack
+
+- **Framework:** Next.js (React)
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Animations:** Framer Motion
+- **Language:** TypeScript
+
+## 🛠️ Getting Started
+
+First, clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/avinashvishu/My-Portfolio.git
+cd My-Portfolio
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📬 Contact
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Email:** avinashvishu26@gmail.com
+- **LinkedIn:** [v-avinash-22b4741b0](https://www.linkedin.com/in/v-avinash-22b4741b0)
+- **WhatsApp:** [+91 7366970943](https://wa.me/917366970943)
