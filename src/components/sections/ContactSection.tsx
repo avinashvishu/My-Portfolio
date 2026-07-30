@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Mail, Phone, Briefcase, Send, CheckCircle2, AlertCircle, MessageCircle } from "lucide-react";
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -43,6 +43,7 @@ export default function ContactSection() {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
+          phone: formData.phone,
           message: formData.message,
           _subject: "New Portfolio Contact Form Submission",
           _template: "table",
@@ -52,7 +53,7 @@ export default function ContactSection() {
 
       if (response.ok) {
         setStatus("success");
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
         throw new Error("Failed to submit form");
       }
@@ -210,6 +211,59 @@ export default function ContactSection() {
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
                         placeholder="john@example.com"
                         required
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                      Your Phone Number
+                    </label>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <select 
+                        className="w-full sm:w-1/3 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all cursor-pointer"
+                        onChange={(e) => {
+                          const code = e.target.value;
+                          if (!code) return;
+                          
+                          const currentPhone = formData.phone.trim();
+                          if (!currentPhone) {
+                            setFormData({ ...formData, phone: code + " " });
+                          } else if (!currentPhone.startsWith('+')) {
+                            setFormData({ ...formData, phone: code + " " + currentPhone });
+                          } else {
+                            const spaceIndex = currentPhone.indexOf(' ');
+                            if (spaceIndex !== -1) {
+                              setFormData({ ...formData, phone: code + " " + currentPhone.substring(spaceIndex + 1) });
+                            } else {
+                              setFormData({ ...formData, phone: code + " " });
+                            }
+                          }
+                        }}
+                      >
+                        <option value="">Country (Optional)</option>
+                        <option value="+1">US / Canada (+1)</option>
+                        <option value="+44">United Kingdom (+44)</option>
+                        <option value="+91">India (+91)</option>
+                        <option value="+61">Australia (+61)</option>
+                        <option value="+49">Germany (+49)</option>
+                        <option value="+33">France (+33)</option>
+                        <option value="+81">Japan (+81)</option>
+                        <option value="+971">UAE (+971)</option>
+                        <option value="+65">Singapore (+65)</option>
+                        <option value="+27">South Africa (+27)</option>
+                        <option value="+55">Brazil (+55)</option>
+                        <option value="+86">China (+86)</option>
+                      </select>
+                      
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full sm:w-2/3 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+                        placeholder="e.g. +91 0000000000"
                       />
                     </div>
                   </div>
