@@ -5,7 +5,7 @@ import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "Dr. Odin (US)",
+    title: "Critter Society",
     url: "https://crittersociety.com/",
     description: "E-commerce platform for healthcare and wellness products for Pets targeting the US market.",
     tags: ["E-Commerce", "Shopify", "Healthcare"]
