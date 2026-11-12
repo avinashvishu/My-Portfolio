@@ -38,6 +38,18 @@ export default function AboutSection() {
                 complete suite of services to transform your digital presence.
               </p>
             </div>
+            <div className="flex justify-center md:justify-start mb-10">
+  <a
+    href="https://github.com/avinashvishu"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all font-semibold text-foreground"
+  >
+    <Github size={20} />
+    Explore My GitHub
+    <ExternalLink size={16} />
+  </a>
+</div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
               {highlights.map((item, index) => (
